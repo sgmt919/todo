@@ -1,0 +1,178 @@
+* {
+  margin: 0 auto;
+  
+}
+html,body{
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+body {
+  background-color: #9dcbd3;
+}
+
+.main-container {
+  width: 90vw;
+  height: auto;
+  max-width: 1000px;
+  min-height: 90vh;
+  margin: 30px auto;
+  padding-bottom: 30px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title {
+  padding: 30px 0;
+  color: #404040;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form__text {
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  border: solid 1px #9d9d9d;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #404040;
+  cursor: text;
+  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.2);
+}
+.form__add-btn {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 45px;
+  padding: 0;
+  margin: 0;
+  background-color: #ff533c;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.todo-lists {
+  width: 100%;
+  margin-top: 40px;
+}
+.todo-lists > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  border-bottom: solid 1px #9d9d9d;
+}
+.list__check {
+  flex-grow: 0;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  margin-right: 15px;
+  border: solid 1px #9d9d9d;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+.list__check:hover {
+  background-color: #ff533c;
+}
+.list__text {
+  flex-grow: 1;
+  font-size: 18px;
+  color: #404040;
+}
+.list__delate {
+  flex-grow: 0;
+  font-size: 13px;
+  color: #9d9d9d;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: all 0.2s;
+}
+.list__delate:hover {
+  color: #404040;
+  transform: scale(1.1);
+}
+.list.done .list__check {
+  background-color: #ff533c;
+}
+.list.done .list__text {
+  color: #9d9d9d;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 44px;
+  }
+
+  .form {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .form__text {
+    height: 60px;
+    width: calc(100% - 150px);
+    margin: 0;
+    font-size: 24px;
+  }
+  .form__add-btn {
+    height: 60px;
+    width: 100px;
+    font-size: 26px;
+  }
+
+  .list__check {
+    width: 20px;
+    height: 20px;
+  }
+  .list__text {
+    font-size: 24px;
+  }
+  .list__delate {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1000px) {
+  .wrapper {
+    width: 70%;
+  }
+
+  .title {
+    padding: 40px 0;
+    font-size: 64px;
+    
+  }
+
+  .list__check {
+    width: 27px;
+    height: 27px;
+  }
+}
